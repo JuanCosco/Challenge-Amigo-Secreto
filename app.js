@@ -7,35 +7,41 @@ function agregarAmigo() {
   let nombre = document.getElementById("amigo").value.trim();
 
   if (nombre === "") {
-    alert("Por favor ingresa el nombre del amigo");
+    alert("Por favor, ingresa el nombre del amigo.");
     return;
-  } else {
-    amigos.push(nombre);
-    actualizarLista();
-    LimpiarCaja();
-    console.log(amigos);
   }
+  amigos.push(nombre);
+  actualizarLista();
+  limpiarCaja();
+  console.log(amigos);
 }
 
 function actualizarLista() {
   let lista = document.getElementById("listaAmigos");
   lista.innerHTML = "";
   for (let i = 0; i < amigos.length; i++) {
-    lista.innerHTML += `<li>Amigo ${i + 1}: ${amigos[i]}</li>`;
+    lista.innerHTML += `<li>Amigo ${i + 1}: ${amigos[i]} 
+    <button onclick="eliminarAmigo(${i})" >Eliminar</button>
+    </li>`;
   }
 }
 
-function LimpiarCaja() {
+function limpiarCaja() {
   let valorCaja = (document.querySelector("#amigo").value = "");
+}
+
+function eliminarAmigo(indice) {
+  amigos.splice(indice, 1);
+  actualizarLista();
+  console.log(indice);
 }
 
 function sortearAmigo() {
   if (amigos.length === 0) {
-    alert("No hay amigos para sortear");
+    alert("No hay amigos para sortear.");
     return;
   }
   const sorteoAmigos = Math.floor(Math.random() * amigos.length);
-
   const amigoSorteado = amigos[sorteoAmigos];
   console.log(amigoSorteado);
 
@@ -46,4 +52,9 @@ function sortearAmigo() {
   //Eliminar al amigo ya elegido
   amigos.splice(sorteoAmigos, 1);
   actualizarLista();
+
+  // Mensaje cuando todo los amigos se han sorteado
+  if (amigos.length === 0) {
+    resultado.innerHTML += `<li>¡Todos los amigos han sido sorteados!</li>`;
+  }
 }
