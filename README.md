@@ -11,9 +11,10 @@ Es parte de un challenge para practicar **JavaScript y la manipulación del DOM*
 
 - Agregar nombres a la lista de amigos.
 - Validación para evitar campos vacíos.
-- Mostrar lista numerada de amigos (`Primer amigo`, `Segundo amigo`, etc.).
+- Mostrar lista numerada de amigos.
 - Sortear un amigo secreto de manera aleatoria.
 - Interfaz amigable y fácil de usar.
+- Mensaje de alerta para evitar problemas con el DOOM y la logica de programacion.
 
 ---
 
