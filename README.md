@@ -15,6 +15,8 @@ Es parte de un challenge para practicar **JavaScript y la manipulación del DOM*
 - Sortear un amigo secreto de manera aleatoria.
 - Interfaz amigable y fácil de usar.
 - Mensaje de alerta para evitar problemas con el DOOM y la logica de programacion.
+- Eliminar amigos que ya no son necesarios o ya fueron elegidos.
+- Sortea hasta que todos los amigos hayan sido elegidos.
 
 ---
 
