@@ -44,6 +44,6 @@ function sortearAmigo() {
   resultado.innerHTML = `<li>El amigo secreto elegido es ${amigoSorteado}</li>`;
 
   //Eliminar al amigo ya elegido
-  amigos.splice(sortearAmigo, 1);
+  amigos.splice(sorteoAmigos, 1);
   actualizarLista();
 }
