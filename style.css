@@ -137,7 +137,7 @@ ul {
 
 .name-list{
     display: grid;
-    text-align: center;
+    text-align: justify;
     gap: 10px;
 }
 

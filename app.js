@@ -11,13 +11,13 @@ function agregarAmigo() {
     return;
   } else {
     amigos.push(nombre);
-    actulaizarLista();
+    actualizarLista();
     LimpiarCaja();
     console.log(amigos);
   }
 }
 
-function actulaizarLista() {
+function actualizarLista() {
   let lista = document.getElementById("listaAmigos");
   lista.innerHTML = "";
   for (let i = 0; i < amigos.length; i++) {
@@ -25,7 +25,7 @@ function actulaizarLista() {
   }
 }
 
-function LimpiarCaja(){
+function LimpiarCaja() {
   let valorCaja = (document.querySelector("#amigo").value = "");
 }
 
@@ -41,5 +41,9 @@ function sortearAmigo() {
 
   //Mostrar Resultado
   const resultado = document.getElementById("resultado");
-  resultado.innerHTML = `<li>El amigo elegido es ${amigoSorteado}</li>`;
+  resultado.innerHTML = `<li>El amigo secreto elegido es ${amigoSorteado}</li>`;
+
+  //Eliminar al amigo ya elegido
+  amigos.splice(sortearAmigo, 1);
+  actualizarLista();
 }
